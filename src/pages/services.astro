@@ -1,0 +1,81 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+<Layout>
+  <!-- Services Hero with Contextual Image -->
+  <section class="max-w-7xl mx-auto py-24 px-6 grid lg:grid-cols-2 gap-16 items-center">
+    <div>
+      <h2 class="text-teal-600 font-bold tracking-widest uppercase text-sm mb-3">Our Clinical Offerings</h2>
+      <h1 class="text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">Comprehensive Care for the Community.</h1>
+      <p class="text-lg text-slate-600 leading-relaxed mb-8">
+        Calvary Community Clinic provides FREE primary health care including diagnosis, treatment, and follow-up care for Hillsborough County residents, regardless of gender, age, national origin, ethnicity, race, or the ability to pay.
+      </p>
+    </div>
+    
+    <div class="relative">
+      <div class="absolute inset-0 bg-blue-100 rounded-[2.5rem] -rotate-3 scale-105 -z-10"></div>
+      <img 
+        src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1600&auto=format&fit=crop" 
+        alt="Medical professional examining a patient" 
+        class="rounded-[2.5rem] shadow-xl w-full h-[450px] object-cover border-4 border-white"
+      />
+    </div>
+  </section>
+
+  <section class="bg-slate-50 py-24 px-6 border-t border-slate-200 min-h-screen">
+    <div class="max-w-7xl mx-auto">
+      <!-- Eligibility Banner -->
+      <div class="bg-slate-900 rounded-3xl p-8 md:p-12 mb-20 text-white shadow-xl shadow-slate-200/50 relative overflow-hidden">
+        <!-- Abstract Background Element -->
+        <div class="absolute top-0 right-0 w-96 h-96 bg-teal-600 rounded-full mix-blend-overlay filter blur-[80px] opacity-40"></div>
+        
+        <div class="relative z-10 grid lg:grid-cols-3 gap-12 items-center">
+          <div class="lg:col-span-1">
+            <h3 class="text-3xl font-bold mb-4 text-white">Who We Serve</h3>
+            <p class="text-slate-300 leading-relaxed">Our services are strictly reserved for those who fall through the cracks of the modern healthcare system.</p>
+          </div>
+          <div class="lg:col-span-2 grid sm:grid-cols-2 gap-6 text-slate-200 font-medium">
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3"><svg class="w-6 h-6 text-teal-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Uninsured individuals (No private insurance)</li>
+              <li class="flex items-start gap-3"><svg class="w-6 h-6 text-teal-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> No Medicaid or Medicare (Part A or B)</li>
+              <li class="flex items-start gap-3"><svg class="w-6 h-6 text-teal-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> The unemployed and underprivileged</li>
+            </ul>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3"><svg class="w-6 h-6 text-teal-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> The working poor</li>
+              <li class="flex items-start gap-3"><svg class="w-6 h-6 text-teal-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Underserved segments of our community</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- General Medicine -->
+        <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300 group">
+          <div class="w-14 h-14 bg-teal-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-teal-600 transition-colors">
+            <svg class="w-7 h-7 text-teal-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-3">General Medicine</h3>
+          <p class="text-slate-600 leading-relaxed">Routine check-ups, diagnosis, treatment, and holistic primary care provided by our volunteer physicians and nurse practitioners.</p>
+        </div>
+
+        <!-- Health Screenings -->
+        <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300 group">
+          <div class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 transition-colors">
+            <svg class="w-7 h-7 text-blue-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-3">Health Screenings</h3>
+          <p class="text-slate-600 leading-relaxed">Preventative care including crucial blood pressure checks, cholesterol monitoring, and baseline wellness testing.</p>
+        </div>
+
+        <!-- Managing Diabetes -->
+        <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 hover:shadow-xl hover:shadow-teal-900/5 transition-all duration-300 group">
+          <div class="w-14 h-14 bg-emerald-50 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-emerald-600 transition-colors">
+            <svg class="w-7 h-7 text-emerald-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+          </div>
+          <h3 class="text-2xl font-bold text-slate-900 mb-3">Managing Diabetes</h3>
+          <p class="text-slate-600 leading-relaxed">Focused care and education on blood sugar monitoring, nutritional adjustments, and managing chronic diabetic conditions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
