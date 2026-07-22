@@ -1,0 +1,30 @@
+---
+import Layout from '../../layouts/Layout.astro';
+---
+<Layout>
+  <section class="min-h-[80vh] flex items-center justify-center bg-slate-50 px-6 py-12">
+    <div class="bg-white p-10 rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 w-full max-w-md">
+      <div class="text-center mb-8">
+        <div class="w-12 h-12 bg-teal-100 text-teal-600 rounded-xl flex items-center justify-center mx-auto mb-4">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+        </div>
+        <h1 class="text-2xl font-extrabold text-slate-900">Patient Portal</h1>
+        <p class="text-slate-500 mt-2">Sign in to manage your appointments.</p>
+      </div>
+      
+      <form class="space-y-5" onsubmit="event.preventDefault(); window.location.href='/portal/dashboard';">
+        <div class="space-y-2">
+          <label class="text-sm font-bold text-slate-700">Email Address</label>
+          <input type="email" value="demo@patient.com" class="w-full bg-slate-50 border border-slate-200 px-4 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500/50" />
+        </div>
+        <div class="space-y-2">
+          <label class="text-sm font-bold text-slate-700">Password</label>
+          <input type="password" value="********" class="w-full bg-slate-50 border border-slate-200 px-4 py-3 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500/50" />
+        </div>
+        <button type="submit" class="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold text-lg py-3.5 rounded-xl shadow-md transition-all mt-4">
+          Secure Sign In
+        </button>
+      </form>
+    </div>
+  </section>
+</Layout>
