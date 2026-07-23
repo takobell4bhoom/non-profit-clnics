@@ -1,29 +1,56 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const officers = [
+  { name: "Hugh Percy", role: "Chairman", initials: "HP" },
+  { name: "Albert Coleman", role: "Vice Chairman", initials: "AC" },
+  { name: "Dr. Ann Marie Weekes", role: "Medical Director", initials: "AW" },
+  { name: "Dr. Darnett Nickle", role: "Executive Director", initials: "DN" },
+  { name: "Darlene Chisolm", role: "Secretary", initials: "DC" },
+  { name: "Nathniel Mattox", role: "Treasurer", initials: "NM" },
+];
+
+const directors = [
+  { name: "Rosa Cambridge", role: "Director", initials: "RC" },
+  { name: "Brenda Greenway", role: "Director", initials: "BG" },
+  { name: "Cheryle Kenneth-Jenkins", role: "Director", initials: "CJ" },
+  { name: "John Richardson", role: "Director", initials: "JR" },
+  { name: "Rev. Essie Sims", role: "Director", initials: "ES" },
+  { name: "Dr. Patrick Vincent", role: "Director", initials: "PV" },
+];
 ---
 <Layout>
   <section class="bg-slate-50 py-24 px-6 border-b border-slate-200">
     <div class="max-w-4xl mx-auto text-center">
-      <h2 class="text-teal-600 font-bold tracking-widest uppercase text-sm mb-3">About Us</h2>
-      <h1 class="text-5xl font-extrabold text-slate-900 mb-6">Our Mission & Vision</h1>
+      <h2 class="text-teal-600 font-bold tracking-widest uppercase text-sm mb-3">About</h2>
+      <h1 class="text-5xl font-extrabold text-slate-900 mb-6">Our History & Mission</h1>
       <p class="text-xl text-slate-600 leading-relaxed font-medium">
-        The mission of the Calvary Community Clinic is to provide FREE healthcare and health education services to the uninsured, underserved and working poor individuals and families of Hillsborough County.
+        Birthed out of a compassionate vision by members of the Mount Calvary SDA Church in 2014, Calvary Community Clinic, Inc. was established to address a critical healthcare gap in the East Tampa community. Today, operating as an independent, community-governed free clinic, we remain dedicated to serving our neighbors with quality, compassionate care.
       </p>
     </div>
   </section>
   
   <section class="max-w-7xl mx-auto py-24 px-6 grid lg:grid-cols-2 gap-16 items-center">
     <div>
-      <h2 class="text-3xl font-bold text-slate-900 mb-6">Our History & Impact</h2>
+      <h2 class="text-3xl font-bold text-slate-900 mb-6">The Need in Our Community</h2>
       <p class="text-slate-600 leading-relaxed mb-6 text-lg">
-        In response to the growing uninsured population in the East Tampa community, Mount Calvary SDA Church established the Calvary Community Clinic. Our goal is to promote holistic wellness and decrease healthcare disparity.
+        Within the 33604, 33610, and 33612 zip codes, the realities of our neighbors include:
       </p>
-      <p class="text-slate-600 leading-relaxed text-lg">
-        Within the 33604, 33610 and 33612 zip codes, 40% of the population has no health insurance coverage and 25% live below the poverty level. We exist to provide quality, compassionate health care to address this critical need.
+      <ul class="space-y-4 mb-8">
+        <li class="flex items-center gap-3 text-lg text-slate-700 font-medium">
+          <svg class="w-6 h-6 text-teal-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          40% of the population has no health insurance coverage.
+        </li>
+        <li class="flex items-center gap-3 text-lg text-slate-700 font-medium">
+          <svg class="w-6 h-6 text-teal-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          25% of residents live below the federal poverty level.
+        </li>
+      </ul>
+      <p class="text-slate-600 leading-relaxed text-lg font-medium p-6 bg-teal-50 border-l-4 border-teal-600 rounded-r-xl">
+        Calvary Community Clinic bridges this gap by providing essential healthcare services for the underprivileged, uninsured, unemployed, and underserved segments of our community.
       </p>
     </div>
     
-    <!-- Contextual Image Addition -->
     <div class="relative">
       <div class="absolute inset-0 bg-teal-600 rounded-3xl translate-x-4 translate-y-4 -z-10"></div>
       <img 
@@ -34,32 +61,44 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Board of Directors -->
+  <!-- Expanded Board of Directors -->
   <section class="bg-white py-20 px-6 border-t border-slate-100">
-    <div class="max-w-4xl mx-auto">
-      <div class="text-center mb-12">
-        <h3 class="text-3xl font-bold text-slate-900 mb-4">Board of Directors</h3>
-        <p class="text-slate-600">The dedicated leadership driving our mission forward.</p>
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h3 class="text-3xl font-extrabold text-slate-900 mb-4">Meet The Team</h3>
+        <p class="text-lg text-slate-600">The dedicated leadership driving our mission forward.</p>
       </div>
       
-      <div class="grid sm:grid-cols-2 gap-6">
-        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex items-center gap-5">
-          <div class="w-14 h-14 bg-teal-100 text-teal-700 rounded-full flex items-center justify-center font-bold text-xl">PV</div>
-          <div><p class="font-bold text-slate-900 text-lg">Dr. Patrick Vincent</p><p class="text-slate-500 text-sm font-medium">Chairman</p></div>
-        </div>
-        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex items-center gap-5">
-          <div class="w-14 h-14 bg-teal-100 text-teal-700 rounded-full flex items-center justify-center font-bold text-xl">AL</div>
-          <div><p class="font-bold text-slate-900 text-lg">Dr. Antoinette Lloyd</p><p class="text-slate-500 text-sm font-medium">Medical Director</p></div>
-        </div>
-        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex items-center gap-5">
-          <div class="w-14 h-14 bg-teal-100 text-teal-700 rounded-full flex items-center justify-center font-bold text-xl">MA</div>
-          <div><p class="font-bold text-slate-900 text-lg">Marcellina Adonis</p><p class="text-slate-500 text-sm font-medium">Secretary</p></div>
-        </div>
-        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex items-center gap-5">
-          <div class="w-14 h-14 bg-teal-100 text-teal-700 rounded-full flex items-center justify-center font-bold text-xl">AF</div>
-          <div><p class="font-bold text-slate-900 text-lg">Annette Forde</p><p class="text-slate-500 text-sm font-medium">Treasurer</p></div>
+      <div class="mb-12">
+        <h4 class="text-xl font-bold text-slate-800 border-b border-slate-200 pb-3 mb-8">Officers</h4>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {officers.map(officer => (
+            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex items-center gap-5 hover:shadow-md transition-shadow">
+              <div class="w-14 h-14 bg-teal-100 text-teal-700 rounded-full flex items-center justify-center font-bold text-xl shrink-0">{officer.initials}</div>
+              <div>
+                <p class="font-bold text-slate-900 text-lg leading-tight">{officer.name}</p>
+                <p class="text-teal-600 text-sm font-bold mt-1">{officer.role}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
+
+      <div>
+        <h4 class="text-xl font-bold text-slate-800 border-b border-slate-200 pb-3 mb-8">Directors</h4>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {directors.map(director => (
+            <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 flex items-center gap-5 hover:shadow-md transition-shadow">
+              <div class="w-14 h-14 bg-slate-200 text-slate-600 rounded-full flex items-center justify-center font-bold text-xl shrink-0">{director.initials}</div>
+              <div>
+                <p class="font-bold text-slate-900 text-lg leading-tight">{director.name}</p>
+                <p class="text-slate-500 text-sm font-medium mt-1">{director.role}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
     </div>
   </section>
 </Layout>

@@ -4,29 +4,89 @@ import { Image } from 'astro:assets';
 import donateImg from '../assets/donate.jpg';
 ---
 <Layout>
-  <!-- Hero Section with Community Imagery -->
+  <!-- Hero Section -->
   <section class="max-w-7xl mx-auto py-24 px-6 grid lg:grid-cols-2 gap-16 items-center">
     <div class="order-2 lg:order-1 relative">
       <div class="absolute inset-0 bg-slate-200 rounded-[2.5rem] rotate-3 scale-105 -z-10"></div>
-      
-      <!-- Optimized Local Asset -->
       <Image 
         src={donateImg} 
         alt="Charity and Donation Drop Box" 
         class="rounded-[2.5rem] shadow-2xl w-full h-[500px] object-cover border-4 border-white"
       />
-      
     </div>
 
     <div class="order-1 lg:order-2">
-      <h2 class="text-teal-600 font-bold tracking-widest uppercase text-sm mb-3">Support Our Clinic</h2>
+      <h2 class="text-teal-600 font-bold tracking-widest uppercase text-sm mb-3">Support Our Mission</h2>
       <h1 class="text-5xl font-extrabold text-slate-900 mb-6">Invest in the health of East Tampa.</h1>
-      <p class="text-xl text-slate-600 leading-relaxed mb-8">
-        Our ability to provide free services depends entirely on generous donations from people like you. All donations are tax-deductible and directly support clinic operations, medical supplies, and educational resources.
+      <p class="text-lg text-slate-600 leading-relaxed mb-6">
+        The Calvary Community Clinic needs your support. Our ability to provide free medical services depends entirely on the generous donations and backing of our community. 
+      </p>
+      <p class="text-lg text-slate-600 leading-relaxed font-medium">
+        Because we operate as an independent 501(c)(3) non-profit organization, <strong class="text-slate-900">100% of your gift goes directly toward patient care and operational support.</strong> All donations are fully tax-deductible.
       </p>
     </div>
   </section>
     
+  <!-- Payment Methods Section -->
+  <section class="bg-white py-16 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <h3 class="text-3xl font-extrabold text-slate-900 mb-4">Ways to Give</h3>
+        <p class="text-lg text-slate-600">Donating is easy! Simply use any of our secure, direct payment methods below:</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Online/PayPal -->
+        <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 flex flex-col items-center text-center hover:shadow-lg transition-shadow">
+          <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-4">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path></svg>
+          </div>
+          <h4 class="text-xl font-bold text-slate-900 mb-2">Donate Online</h4>
+          <p class="text-slate-600 mb-6">Give securely via our independent PayPal merchant account.</p>
+          <a href="#" class="mt-auto bg-[#0070ba] hover:bg-[#003087] text-white font-bold py-3 px-8 rounded-full transition-colors w-full">
+            Donate via PayPal
+          </a>
+        </div>
+
+        <!-- Cash App -->
+        <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 flex flex-col items-center text-center hover:shadow-lg transition-shadow">
+          <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+          <h4 class="text-xl font-bold text-slate-900 mb-2">Cash App</h4>
+          <p class="text-slate-600 mb-6">Find us on Cash App.</p>
+          <div class="mt-auto bg-green-500 text-white font-bold py-3 px-8 rounded-full w-full">
+            $CalvaryClinicTampa
+          </div>
+        </div>
+
+        <!-- Zelle -->
+        <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 flex flex-col items-center text-center hover:shadow-lg transition-shadow">
+          <div class="w-16 h-16 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mb-4">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path></svg>
+          </div>
+          <h4 class="text-xl font-bold text-slate-900 mb-2">Zelle</h4>
+          <p class="text-slate-600 mb-6">Send directly from your bank app to our clinic email.</p>
+          <div class="mt-auto bg-purple-600 text-white font-bold py-3 px-4 rounded-full w-full text-sm sm:text-base break-all">
+            calvarycommunityclinic@gmail.com
+          </div>
+        </div>
+
+        <!-- Mail -->
+        <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 flex flex-col items-center text-center hover:shadow-lg transition-shadow">
+          <div class="w-16 h-16 bg-slate-200 text-slate-700 rounded-full flex items-center justify-center mb-4">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+          </div>
+          <h4 class="text-xl font-bold text-slate-900 mb-2">By Mail</h4>
+          <p class="text-slate-600 mb-4">Checks can be made out directly to <strong>Calvary Community Clinic, Inc.</strong> and mailed to:</p>
+          <div class="mt-auto bg-slate-900 text-white font-medium py-3 px-8 rounded-xl w-full text-sm">
+            3401 E. Louisiana Ave<br/>Tampa, FL 33610
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- The Campaign Section -->
   <section class="bg-slate-50 py-24 px-6 border-t border-slate-200">
     <div class="max-w-6xl mx-auto">
@@ -37,25 +97,28 @@ import donateImg from '../assets/donate.jpg';
         
         <div class="relative z-10">
           <div class="inline-block bg-teal-500/20 text-teal-300 font-bold px-4 py-1.5 rounded-full text-sm mb-6 uppercase tracking-wider border border-teal-500/30">Annual Fund Drive</div>
-          <h3 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">A Thousand Points of Light</h3>
+          <h3 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">Be a Point of Light</h3>
           <p class="text-slate-300 mb-6 text-lg leading-relaxed">
-            George Bush used the phrase "A Thousand Points of Light" to inspire individual contributions to society. Our aim is to be those points of light shining brightly throughout East Tampa.
+            The phrase "A Thousand Points of Light" was famously used to inspire individuals to spark positive change in their communities. The ultimate goal of our free clinic is to be a shining beacon of health, hope, and light throughout East Tampa.
           </p>
-          <p class="text-slate-300 font-medium text-lg border-l-4 border-teal-500 pl-4 bg-white/5 p-4 rounded-r-xl">
-            Each <span class="text-teal-400 font-bold text-xl">$10.00</span> contribution represents one point of light. We need 1,000 points of light to balance our $10,000 budget.
+          <p class="text-slate-300 mb-4 text-lg leading-relaxed">
+            To maintain a balanced operational budget, we are looking for dedicated community partners to join our Point of Light initiative:
           </p>
+          <ul class="space-y-3 mb-6 text-lg text-slate-200">
+            <li class="flex items-start gap-3"><svg class="w-6 h-6 text-teal-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Each $10.00 monthly contribution represents one point of light.</li>
+            <li class="flex items-start gap-3"><svg class="w-6 h-6 text-teal-400 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Our goal is to secure 1,000 "Points of Light" to sustain our critical community programs.</li>
+          </ul>
         </div>
         
-        <div class="relative z-10 bg-white/10 p-10 rounded-3xl backdrop-blur-md border border-white/20 text-center shadow-2xl">
-          <div class="text-7xl font-extrabold text-white mb-2 tracking-tighter">$10</div>
-          <p class="text-teal-300 font-bold mb-10 uppercase tracking-widest text-sm">Monthly Contribution</p>
+        <div class="relative z-10 bg-white/10 p-10 rounded-3xl backdrop-blur-md border border-white/20 text-center shadow-2xl flex flex-col justify-center">
+          <div class="text-7xl font-extrabold text-white mb-6 tracking-tighter">$10</div>
+          <p class="text-slate-200 font-medium mb-8 text-lg">
+            Whether you can commit to a $10 monthly gift or a one-time contribution of any size, your support directly impacts an uninsured neighbor in need.
+          </p>
+          <h4 class="text-2xl font-bold text-teal-300 mb-8">Will you be a Point of Light for East Tampa today?</h4>
           <button class="w-full bg-teal-500 hover:bg-teal-400 text-slate-950 font-extrabold text-lg py-5 rounded-2xl shadow-[0_0_40px_rgba(20,184,166,0.4)] transition-all hover:-translate-y-1 hover:shadow-[0_0_60px_rgba(20,184,166,0.6)]">
             Become a Point of Light
           </button>
-          <p class="text-slate-400 text-sm mt-6 flex items-center justify-center gap-2">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-            Secure payments processed via Stripe.
-          </p>
         </div>
       </div>
     </div>
